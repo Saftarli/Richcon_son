@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
 from core import models
-from core.models import ContactInfo
+from core.models import ContactInfo, Project
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'projects': Project.objects.all(),
+    }
+    return render(request, 'index.html', context)
 
 def about(request):
     return render(request, 'about.html', context={})
