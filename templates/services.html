@@ -1,0 +1,63 @@
+{%  extends 'include/base.html' %}
+{% load static %}
+
+{% block body   %}
+        <section class="hero-wrap hero-wrap-2" style="background-image: url({%  static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Xidmətlərimiz</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>xidmətlərimiz<i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row no-gutters">
+            <!-- Sol tərəfdə şəkil -->
+            <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0"
+                 style="background-image: url({% static 'images/bg_2.jpg' %});">
+            </div>
+
+            <!-- Sağ tərəfdə xidmətlər -->
+            <div class="col-md-7 wrap-about py-5 px-4 px-md-5 ftco-animate">
+                <div class="heading-section mb-5">
+                    <h2 class="mb-4">Xidmətlərimiz</h2>
+                </div>
+
+                <!-- İki sütunlu xidmətlər siyahısı -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="service-list">
+                            <li>Sudan (Nəmdən) izolasiya</li>
+                            <li>İstidən-soyuqdan (Temperatur) izolasiya</li>
+                            <li>Təməl, dam və fasad izolasiyası</li>
+                            <li>Su anbarları (İçməli, texniki)</li>
+                            <li>Su hovuzlarının (Daxildən və xaricdən izolasiyası)</li>
+                            <li>Yer beton örtükləri (Epoksid, beton yonma)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="service-list">
+                            <li>Beton styajka işləri</li>
+                            <li>Fasad örtükləri</li>
+                            <li>Temperatur şov izolasiyası</li>
+                            <li>Səs izolasiyası</li>
+                            <li>Süni göllərin izolasiyası</li>
+                            <li>Yanğından izolasiya</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
