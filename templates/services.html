@@ -1,63 +1,99 @@
-{%  extends 'include/base.html' %}
+{% extends 'include/base.html' %}
 {% load static %}
+{% block seo %}
+        <title> Richcon Construction | {{ service_page.head_title }}</title>
+        <meta content="{{ service_page.meta_description }}" name="description" />
+        <meta content="{{ service_page.meta_keywords }}" name="keywords" />
+{% endblock %}
 
-{% block body   %}
-        <section class="hero-wrap hero-wrap-2" style="background-image: url({%  static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Xidmətlərimiz</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>xidmətlərimiz<i class="ion-ios-arrow-forward"></i></span></p>
-          </div>
-        </div>
+{% block body %}
+<section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate text-center">
+        <h1 class="mb-2 bread">Xidmətlərimiz</h1>
+        <p class="breadcrumbs">
+          <span class="mr-2"><a href="{% url 'index' %}">Ana səhifə <i class="ion-ios-arrow-forward"></i></a></span>
+          <span>Xidmətlərimiz <i class="ion-ios-arrow-forward"></i></span>
+        </p>
       </div>
-    </section>
-
-
-<section class="ftco-section">
-    <div class="container">
-        <div class="row no-gutters">
-            <!-- Sol tərəfdə şəkil -->
-            <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0"
-                 style="background-image: url({% static 'images/bg_2.jpg' %});">
-            </div>
-
-            <!-- Sağ tərəfdə xidmətlər -->
-            <div class="col-md-7 wrap-about py-5 px-4 px-md-5 ftco-animate">
-                <div class="heading-section mb-5">
-                    <h2 class="mb-4">Xidmətlərimiz</h2>
-                </div>
-
-                <!-- İki sütunlu xidmətlər siyahısı -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="service-list">
-                            <li>Sudan (Nəmdən) izolasiya</li>
-                            <li>İstidən-soyuqdan (Temperatur) izolasiya</li>
-                            <li>Təməl, dam və fasad izolasiyası</li>
-                            <li>Su anbarları (İçməli, texniki)</li>
-                            <li>Su hovuzlarının (Daxildən və xaricdən izolasiyası)</li>
-                            <li>Yer beton örtükləri (Epoksid, beton yonma)</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-6">
-                        <ul class="service-list">
-                            <li>Beton styajka işləri</li>
-                            <li>Fasad örtükləri</li>
-                            <li>Temperatur şov izolasiyası</li>
-                            <li>Səs izolasiyası</li>
-                            <li>Süni göllərin izolasiyası</li>
-                            <li>Yanğından izolasiya</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </div>
+  </div>
 </section>
 
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 wrap-about py-5 px-md-5 ftco-animate">
+        <div class="heading-section mb-4 text-center">
+          <h2 class="mb-4">Xidmətlərimiz</h2>
+          <p>Aşağıda təqdim olunan xidmətlər ilə bina və obyektlərinizin təhlükəsizliyini, davamlılığını və estetik görünüşünü təmin edirik.</p>
+        </div>
 
+        <!-- Xidmət siyahısı -->
+        <div class="row">
+<div class="col-md-6">
+  <ul class="list-unstyled">
+    <li>
+      <strong>Su və Nəmdən İzolyasiya</strong><br>
+      Yüksək keyfiyyətli materiallarla binalarınızı su sızmalarına və nəmişliyə qarşı qoruyuruq.
+    </li>
+    <li>
+      <strong>Temperatur İzolyasiyası</strong><br>
+      Yayda sərin, qışda isti mühit təmin etmək üçün istilik və soyuqluq əleyhinə izolyasiya sistemləri.
+    </li>
+    <li>
+      <strong>Təməl, Dam və Fasad İzolyasiyası</strong><br>
+      Tikililərin əsas daşıyıcı konstruksiyalarını xarici təsirlərdən qoruyaraq uzunömürlü qoruma təmin edirik.
+    </li>
+    <li>
+      <strong>Su Anbarlarının İzolyasiyası</strong><br>
+      İçməli və texniki su anbarlarında sızmanın qarşısını alan etibarlı izolyasiya həlləri.
+    </li>
+    <li>
+      <strong>Hovuz İzolyasiyası</strong><br>
+      Hovuzların daxili və xarici səthlərində tam sızdırmazlıq üçün müasir izolyasiya materialları.
+    </li>
+    <li>
+      <strong>Epoksid və Beton Yonma</strong><br>
+      Müasir və davamlı zəminlər üçün epoksid örtüklər və beton səth cilalama xidmətləri.
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-6">
+  <ul class="list-unstyled">
+    <li>
+      <strong>Beton Styajka İşləri</strong><br>
+      Zəminlərin hamar və davamlı əsas qata sahib olması üçün keyfiyyətli beton styajka tətbiqi.
+    </li>
+    <li>
+      <strong>Fasad Örtükləri</strong><br>
+      Estetik görünüş və əlavə izolyasiya üçün müasir fasad örtüklərinin quraşdırılması.
+    </li>
+    <li>
+      <strong>Temperatur Şov İzolyasiyası</strong><br>
+      İstilik dəyişmələrinin səbəb olduğu çatlama və deformasiyaların qarşısını almaq üçün xüsusi izolyasiya.
+    </li>
+    <li>
+      <strong>Səs İzolyasiyası</strong><br>
+      Akustik komfort yaratmaq üçün müasir texnologiyalara əsaslanan səs keçirməyən izolyasiya həlləri.
+    </li>
+    <li>
+      <strong>Süni Göllərin İzolyasiyası</strong><br>
+      Dekorativ və süni su hövzələrinin uzunmüddətli istifadə üçün su keçirməz izolyasiya ilə təmin edilməsi.
+    </li>
+    <li>
+      <strong>Yanğından Mühafizə İzolyasiyası</strong><br>
+      Yanğın risklərini azaltmaq və təhlükəsizliyi artırmaq üçün yanğına davamlı izolyasiya sistemləri.
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
